@@ -26,7 +26,7 @@ header, section, footer {
   font-family: arial;
 }
 
-.flex-box div, #avatar, #logo {
+.flex-box div, #logo {
   height: 25vh;
 }
 
@@ -34,9 +34,9 @@ header, section, footer {
   width: auto;
 }
 
-.flex-box a{
-  line-height: 25vh;
-  color: white;
+.line, .line2, .line3, .line4 {
+  background-color: black;
+  height: 0.5vh;
 }
 
 /*header specific code*/
@@ -50,6 +50,11 @@ header {
   flex-wrap: wrap;
 }
 
+.flex-box a{
+  line-height: 25vh;
+  color: white;
+}
+
 .flex-box div {
   font-size: 30px;
   padding: 0px 20px;
@@ -61,9 +66,7 @@ header {
 }
 
 #logo {
-  transition-duration: transform 20s;
-  transition-delay: 2s;
-  transform: rotateY(1800000deg);
+  transition: transform 2s;
 }
 
 #logo:hover {
@@ -74,34 +77,8 @@ header {
 section {
   height: auto;
   background-color: #eef7df;
+  margin-top: 0.5vh;
 }
-
-.asideLeft {
-  display: grid;
-  grid-template-columns: 25% 75%;
-  flex-basis: 25%;
-  grid-row-gap: 0.5em;
-}
-
-#avatar {
-  height: 128;
-  grid-column: 1 / span 2;
-  grid-row: 1/ span 2;
-}
-
-.Name { grid-area: 3;}
-.NameR { grid-area: 3/2;}
-.Title { grid-area: 4;}
-.TitleL { grid-area: 4/2;}
-.background { grid-area: 5/1/6/3;}
-.fa-git {grid-area: 6;}
-.git {grid-area: 6/2;}
-.fa-html5{grid-area: 7;}
-.code {grid-area: 7/2;}
-.fa-css3-alt{grid-area: 8;}
-.style {grid-area: 8/2;}
-.tech {grid-area: 9/1/10/3;}
-.pre {grid-area: 10;}
 
 .flexy {
   display: flex;
@@ -109,8 +86,55 @@ section {
 }
 
 .main {
-  flex-basis: 75%;
+  flex-basis: 70%;
 }
+
+.main div {
+  margin: 0.5vh 0;
+}
+
+/*Left side table*/
+
+.asideLeft {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  flex-basis: 25%;
+  grid-row-gap: 0.5em;
+  margin-left: 1vw;
+}
+
+#avatar {
+  height: 25vh;
+  padding-left: 6.25vw;
+  grid-column: 1 / span 2;
+  grid-row: 1/ span 2;
+  justify-content: center;
+}
+
+.line { grid-area: 3/1/4/3; }
+.Name { grid-area: 4;}
+.NameR { grid-area: 4/2;}
+.Title { grid-area: 5;}
+.TitleL { grid-area: 5/2;}
+.line2 { grid-area: 6/1/7/3; }
+.background { grid-area: 7/1/8/3;}
+.subGrid {
+  grid-area: 8/1/9/3;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  margin-left: 1vw;
+}
+.fa-git {grid-area: 1;}
+.git {grid-area: 1/2;}
+.fa-html5{grid-area: 2;}
+.code {grid-area: 2/2;}
+.fa-css3-alt{grid-area: 3;}
+.style {grid-area: 3/2;}
+
+.line3 { grid-area: 9/1/10/3; }
+.tech {grid-area: 10/1/11/3; }
+.pre {grid-area: 11; }
+
 /*footer specific code*/
 
 footer {
