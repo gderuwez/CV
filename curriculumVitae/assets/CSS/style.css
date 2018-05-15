@@ -1,0 +1,119 @@
+/*reset*/
+html {
+box-sizing: border-box;
+}
+
+*, *:before, *:after {
+box-sizing: inherit;
+padding: 0; margin: 0;
+}
+
+html,body{
+display: block;
+height: 100%; width: 100%;
+overflow: hidden;
+}
+
+ul,li,a{
+margin: 0; padding: 0;
+list-style: none;
+text-decoration: none;
+}
+
+/*general attributes*/
+header, section, footer {
+  width: 100%;
+  font-family: arial;
+}
+
+.flex-box div, #avatar, #logo {
+  height: 25vh;
+}
+
+#avatar, #logo {
+  width: auto;
+}
+
+.flex-box a{
+  line-height: 25vh;
+  color: white;
+}
+
+/*header specific code*/
+header {
+  background: linear-gradient(to right, #3E4CFF, #35D4FF);
+  border: 1px solid blue;
+}
+
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-box div {
+  font-size: 30px;
+  padding: 0px 20px;
+  text-transform: uppercase;
+}
+
+.flex-box div:hover {
+  background-color: black;
+}
+
+#logo {
+  transition-duration: transform 20s;
+  transition-delay: 2s;
+  transform: rotateY(1800000deg);
+}
+
+#logo:hover {
+  transform: rotateY(180deg);
+}
+
+/*section specific code*/
+section {
+  height: auto;
+  background-color: #eef7df;
+}
+
+.asideLeft {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  flex-basis: 25%;
+  grid-row-gap: 0.5em;
+}
+
+#avatar {
+  height: 128;
+  grid-column: 1 / span 2;
+  grid-row: 1/ span 2;
+}
+
+.Name { grid-area: 3;}
+.NameR { grid-area: 3/2;}
+.Title { grid-area: 4;}
+.TitleL { grid-area: 4/2;}
+.background { grid-area: 5/1/6/3;}
+.fa-git {grid-area: 6;}
+.git {grid-area: 6/2;}
+.fa-html5{grid-area: 7;}
+.code {grid-area: 7/2;}
+.fa-css3-alt{grid-area: 8;}
+.style {grid-area: 8/2;}
+.tech {grid-area: 9/1/10/3;}
+.pre {grid-area: 10;}
+
+.flexy {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  flex-basis: 75%;
+}
+/*footer specific code*/
+
+footer {
+  color: black;
+  text-align: center;
+}
