@@ -23,23 +23,23 @@
           </div>
           <div class="line3"></div>
           <h3 class="tech">Tech preferences</h3>
-          <p class="pre">
-            exemple 1<br>
-            exemple 2<br>
-            exemple 3<br>
-          </p>
+          <div class="pre">
+            <p>exemple 1</p>
+            <p>exemple 2</p>
+            <p>exemple 3</p>
+          </div>
         </div>
         <div class="main">
           <div>
             <h2>Ce que je fais</h2>
             <p>En formation <a href="https://www.linkedin.com/in/guillaume-deruwez-98328a134/" title="lien linkedin" target="_blank">@Becode</a></p>
           </div>
-          <div class="line3"></div>
+          <div class="line4"></div>
           <div>
             <h2>Ce que j'aimerais faire</h2>
             <p>Je voudrais devenir web-developper fullstack</p>
           </div>
-          <div class="line4"></div>
+          <div class="line5"></div>
           <div>
             <h2>Mes hobbys</h2>
             <ul>
