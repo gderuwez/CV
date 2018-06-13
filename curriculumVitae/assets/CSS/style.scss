@@ -1,0 +1,192 @@
+@import 'reset';
+
+/*general attributes*/
+%hsf {
+  width: 100%;
+  font-family: arial;
+}
+
+@mixin height($n) {
+  height: $n * 1vh;
+}
+
+@mixin lheight($n) {
+  line-height: $n * 1vh;
+}
+
+header {
+  @extend %hsf;
+}
+
+section {
+  @extend %hsf;
+}
+
+footer {
+  @extend %hsf;
+}
+
+.flex-box {
+  div {
+    @include height(15);
+  }
+}
+
+#logo {
+  @include height(15);
+}
+
+#avatar, #logo {
+  width: $auto;
+}
+
+%lines {
+  background-color: #999966;
+  @include height(0.5);
+}
+
+.line {
+  @extend %lines;
+}
+.line2 {
+  @extend %lines;
+}
+.line3 {
+  @extend %lines;
+}
+.line4 {
+  @extend %lines;
+}
+.line5 {
+  @extend %lines;
+}
+
+body {
+  position: absolute;
+}
+
+/*header specific code*/
+header {
+  background: linear-gradient(to right, #3E4CFF, #35D4FF);
+}
+
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-box a{
+  @include lheight(15);
+  color: white;
+}
+
+.flex-box div {
+  font-size: 30px;
+  padding: $zero 20px;
+  text-transform: uppercase;
+}
+
+.flex-box div:hover {
+  background-color: black;
+}
+
+#logo {
+  transition: transform 2s;
+}
+
+#logo:hover {
+  transform: rotateY(180deg);
+}
+
+/*section specific code*/
+section {
+  height: $auto;
+  background-color: #eef7df;
+  margin-top: 0.5vh;
+}
+
+.flexy {
+  display: flex;
+  flex-direction: column;
+}
+
+.main div {
+  margin: 0.5vh $zero;
+}
+
+/*Left side table*/
+
+.asideLeft {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-row-gap: 2vh;
+  grid-column-gap: 0.5vw;
+  justify-content: center;
+}
+
+#avatar {
+  @include height(25);
+  grid-column: 1 / span 2;
+  grid-row: 1/ span 2;
+  margin-left: $auto;
+  margin-right: $auto;
+}
+
+.line { grid-area: 3/1/4/3; }
+.Name { grid-area: 4;}
+.NameR { grid-area: 4/2;}
+.Title { grid-area: 5;}
+.TitleL { grid-area: 5/2;}
+.line2 { grid-area: 6/1/7/3; }
+.background { grid-area: 7/1/8/3;}
+.subGrid {
+  grid-area: 8/1/9/3;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  margin-left: 1vw;
+}
+.fa-git {grid-area: 1;}
+.git {grid-area: 1/2;}
+.fa-html5{grid-area: 2;}
+.code {grid-area: 2/2;}
+.fa-css3-alt{grid-area: 3;}
+.style {grid-area: 3/2;}
+
+.line3 { grid-area: 9/1/10/3; }
+.tech {grid-area: 10/1/11/3; }
+.pre {grid-area: 11;}
+
+/*footer specific code*/
+
+footer {
+  color: black;
+  text-align: center;
+  @include height(5);
+  background-color: #999966f7;
+  @include lheight(5);
+  position: relative;
+  bottom: $zero;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  .flexy {
+    flex-direction: row;
+  }
+
+  .main {
+    margin-left: 5vw;
+    flex-basis: 30%;
+  }
+
+  .asideLeft {
+    flex-basis: 25vw;
+    grid-template-columns: 6.25vw 16.75vw;
+  }
+
+  section {
+    @include height(79.5);
+  }
+
+}

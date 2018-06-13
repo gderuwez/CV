@@ -1,0 +1,62 @@
+%box {
+  box-sizing: inherit;
+}
+
+$zero: 0;
+$auto: auto;
+
+%zero{
+  padding: $zero;
+  margin: $zero;
+}
+
+%listDec {
+  list-style: none;
+  text-decoration: none;
+}
+
+%htmlBod {
+  display: block;
+  height: 100%; width: 100%;
+  overflow: $auto;
+}
+
+
+html {
+  box-sizing: border-box;
+  @extend %htmlBod;
+}
+
+* {
+  @extend %box;
+  @extend %zero;
+}
+
+*:before {
+  @extend %box;
+  @extend %zero;
+}
+
+*:after {
+  @extend %box;
+  @extend %zero;
+}
+
+body{
+  @extend %htmlBod;
+}
+
+ul {
+  @extend %zero;
+  @extend %listDec;
+}
+
+li {
+  @extend %zero;
+  @extend %listDec;
+}
+
+a {
+  @extend %zero;
+  @extend %listDec;
+}
